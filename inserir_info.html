@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserir Informações</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image: url('images/background.jpg');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #ffffff;
+            margin-top: 20px;
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        label {
+            color: #333;
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+        }
+
+        select {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .link {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .link:hover {
+            background-color: #2980b9;
+        }
+
+        .centered-heading {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="centered-heading">Inserir Nova Atividade Física</h2>
+    <form action="registrar_atividade.php" method="post">
+        <label for="tipo">Tipo de Atividade:</label>
+        <input type="text" id="tipo" name="tipo" required>
+      
+        <label for="duracao">Duração (minutos):</label>
+        <input type="number" id="duracao" name="duracao" required>
+      
+        <label for="intensidade">Intensidade (baixa/média/alta):</label>
+        <input type="text" id="intensidade" name="intensidade" required>
+      
+        <button type="submit" class="link" name="registrar">Registrar Atividade</button>
+    </form>
+
+    <h2 class="centered-heading">Registrar Refeição</h2>
+    <form action="registrar_refeicao.php" method="post">
+        <label for="tipo">Tipo de Refeição:</label>
+        <input type="text" id="tipo" name="tipo" required>
+    
+        <label for="descricao">Descrição:</label>
+        <input type="text" id="descricao" name="descricao" required>
+    
+        <label for="calorias">Calorias:</label>
+        <input type="number" id="calorias" name="calorias" required>
+    
+        <button type="submit" class="link" name="registrar">Registrar Refeição</button>
+    </form>
+
+    <h2 class="centered-heading">Registrar Bem-Estar Emocional</h2>
+    <form action="registrar_bem_estar.php" method="post">
+        <label for="humor">Humor:</label>
+        <select id="humor" name="humor" required>
+            <option value="Feliz">Feliz</option>
+            <option value="Neutro">Neutro</option>
+            <option value="Triste">Triste</option>
+            <option value="Irritado">Irritado</option>
+        </select>
+
+        <label for="estresse">Nível de Estresse (1 a 10):</label>
+        <input type="number" id="estresse" name="estresse" min="1" max="10" required>
+
+        <label for="descricao">Descrição (opcional):</label>
+        <textarea id="descricao" name="descricao" rows="4"></textarea>
+
+        <button type="submit" class="link" name="registrar">Registrar Bem-Estar Emocional</button>
+    </form>
+    
+</body>
+</html>
